@@ -10,3 +10,4 @@ venv/
 *.pid
 *.bak
 .DS_Store
+!.env.example
