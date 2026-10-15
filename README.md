@@ -1,6 +1,6 @@
 # City Project Backend
 
-FastAPI-бэкенд проекта «Городской симулятор»: логика NPC, чат через WebSocket, отношения, погода, выборы. Фронтенд — репозиторий `LastSother/frontend`.
+FastAPI-бэкенд проекта «Городской симулятор»: логика NPC, чат через WebSocket, отношения, погода, выборы. Фронтенд — репозиторий [`LastSother/city-sim-frontend`](https://github.com/LastSother/city-sim-frontend).
 
 ## Стек
 - Python, FastAPI, Uvicorn
