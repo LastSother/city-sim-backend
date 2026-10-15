@@ -117,6 +117,8 @@ class NPCManager:
                 relation = state['relations'].get(other.name, 'neutral')
                 system = f"Ты {npc.name}, {npc.personality}. Отношение к {other.name}: {relation}. Общайся коротко."
                 reply = await generate_reply(system, [], f"Привет, {other.name}! Как дела?")
+                if reply == FALLBACK_REPLY:
+                    return  # ИИ недоступен — не засоряем новости заглушками
                 db.add(Message(npc_id=npc.id, role='assistant', content=reply))
                 db.commit()
                 await self.add_event(db, f"Разговор: {npc.name} и {other.name}", reply)
